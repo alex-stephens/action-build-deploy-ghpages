@@ -108,7 +108,7 @@ if [[ -n "$JEKYLL_BUILD_PRE_COMMANDS" ]]; then
   echo "Running pre-build commands..."
   eval "$JEKYLL_BUILD_PRE_COMMANDS"
 fi
-bundle exec jekyll build "$JEKYLL_BUILD_OPTS"
+JEKYLL_ENV=production bundle exec jekyll build "$JEKYLL_BUILD_OPTS"
 echo "Successfully built the site!"
 
 if [[ -d "$GH_PAGES_DIST_FOLDER" ]]; then
